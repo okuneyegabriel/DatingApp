@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
+
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
@@ -33,11 +34,13 @@ import { UserService } from './_services/user.service';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 export function tokenGetterHelper(){
    return localStorage.getItem(environment.tokenName);
 }
+
 
 @NgModule({
    declarations: [
@@ -51,7 +54,8 @@ export function tokenGetterHelper(){
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      //TimeAgoPipe
    ],
    imports: [
       BrowserModule,
