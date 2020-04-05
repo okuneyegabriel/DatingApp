@@ -16,7 +16,7 @@
 
     <div *ngIf="loggedIn()" class="btn-group" dropdown>
       <span class="mr-1">
-        <img src="{{ photoUrl }}" alt="">
+        <img src="{{ photoUrl || '../../assets/user.png' }}" alt="">
       </span>
       <button type="button" class="btn btn-danger">Welcome {{authService.decodedToken?.unique_name | titlecase}}</button>
       <button id="button-split" type="button" dropdownToggle class="btn btn-danger dropdown-toggle dropdown-toggle-split"
