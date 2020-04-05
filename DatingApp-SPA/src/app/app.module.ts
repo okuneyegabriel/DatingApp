@@ -30,6 +30,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { PreventUnsavedChangesGuard } from './_guards/prevent-unsaved-changes-guard';
 import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 export function tokenGetterHelper(){
@@ -48,6 +50,7 @@ export function tokenGetterHelper(){
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
@@ -64,7 +67,8 @@ export function tokenGetterHelper(){
             whitelistedDomains: [environment.whiteListDomains],
             blacklistedRoutes: [environment.blackListDomains]
          }
-      })
+      }),
+      FileUploadModule
    ],
    providers: [
       AuthService,
