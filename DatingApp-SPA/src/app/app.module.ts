@@ -37,6 +37,7 @@ import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ButtonsModule} from 'ngx-bootstrap/buttons';
 import {TimeAgoPipe} from 'time-ago-pipe';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 
 export function tokenGetterHelper(){
@@ -88,6 +89,7 @@ export function tokenGetterHelper(){
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
+      ListsResolver,
       AuthGuard,
       PreventUnsavedChangesGuard
    ],
