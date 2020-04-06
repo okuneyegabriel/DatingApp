@@ -16,6 +16,7 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {TabsModule} from 'ngx-bootstrap/tabs';
+import {PaginationModule} from 'ngx-bootstrap/pagination';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
@@ -34,6 +35,7 @@ import { UserService } from './_services/user.service';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ButtonsModule} from 'ngx-bootstrap/buttons';
 import {TimeAgoPipe} from 'time-ago-pipe';
 
 
@@ -54,8 +56,7 @@ export function tokenGetterHelper(){
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent,
-      //TimeAgoPipe
+      PhotoEditorComponent
    ],
    imports: [
       BrowserModule,
@@ -75,7 +76,9 @@ export function tokenGetterHelper(){
             blacklistedRoutes: [environment.blackListDomains]
          }
       }),
-      FileUploadModule
+      FileUploadModule,
+      PaginationModule.forRoot(),
+      ButtonsModule.forRoot()
    ],
    providers: [
       AuthService,
