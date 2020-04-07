@@ -38,6 +38,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ButtonsModule} from 'ngx-bootstrap/buttons';
 import {TimeAgoPipe} from 'time-ago-pipe';
 import { ListsResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 
 export function tokenGetterHelper(){
@@ -57,7 +59,9 @@ export function tokenGetterHelper(){
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      TimeAgoPipe,
+      MemberMessagesComponent
    ],
    imports: [
       BrowserModule,
@@ -90,6 +94,7 @@ export function tokenGetterHelper(){
       MemberListResolver,
       MemberEditResolver,
       ListsResolver,
+      MessagesResolver,
       AuthGuard,
       PreventUnsavedChangesGuard
    ],
