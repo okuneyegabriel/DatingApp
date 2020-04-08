@@ -5,3 +5,4 @@ obj
 *.db*
 appsettings.json
 appsettings.Development.json
+wwwroot

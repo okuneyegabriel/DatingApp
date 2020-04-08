@@ -36,10 +36,10 @@ import { PhotoEditorComponent } from './members/photo-editor/photo-editor.compon
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ButtonsModule} from 'ngx-bootstrap/buttons';
-import {TimeAgoPipe} from 'time-ago-pipe';
 import { ListsResolver } from './_resolvers/lists.resolver';
 import { MessagesResolver } from './_resolvers/messages.resolver';
 import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { TimeagoModule } from 'ngx-timeago';
 
 
 export function tokenGetterHelper(){
@@ -60,7 +60,6 @@ export function tokenGetterHelper(){
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditorComponent,
-      TimeAgoPipe,
       MemberMessagesComponent
    ],
    imports: [
@@ -83,7 +82,8 @@ export function tokenGetterHelper(){
       }),
       FileUploadModule,
       PaginationModule.forRoot(),
-      ButtonsModule.forRoot()
+      ButtonsModule.forRoot(),
+      TimeagoModule.forRoot()
    ],
    providers: [
       AuthService,

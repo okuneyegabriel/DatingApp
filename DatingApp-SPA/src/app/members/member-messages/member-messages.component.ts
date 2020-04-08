@@ -14,6 +14,7 @@ export class MemberMessagesComponent implements OnInit {
   @Input() recipientId: number;
   messages: Message[];
   newMessage: any = {};
+  live = true;
 
   constructor(private userService: UserService, private authService: AuthService, private alertify: AlertifyService) { }
 
